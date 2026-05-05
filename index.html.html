@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مذكرة التربية الإسلامية - الصف الحادي عشر - الفصل الثاني</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;900&display=swap');
+ /* ── SOCIAL BUTTONS FOOTER ── */
+  .footer-social {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 2px solid var(--border);
+    margin-top: 40px;
+  }
+  .footer-social h3 {
+    font-size: 18px;
+    color: var(--emerald);
+    margin-bottom: 20px;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  /* ألوان المنصات */
+  .fb { background-color: #1877F2; }
+  .ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  .wa { background-color: #25D366; }
+  .tg { background-color: #0088cc; }
+
+  :root {
+    --emerald: #0a6640;
+    --gold: #c9993f;
+    --light-gold: #f5e9c8;
+    --dark: #1a1a2e;
+    --cream: #fdfaf3;
+    --border: #d4a843;
+  }
+ 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--cream);
+    color: #222;
+    direction: rtl;
+    line-height: 1.8;
+  }
+ 
+  /* ── COVER ── */
+  .cover {
+    background: linear-gradient(145deg, #0a6640 0%, #0d4f31 50%, #1a1a2e 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0 L35 20 L55 20 L40 32 L46 52 L30 40 L14 52 L20 32 L5 20 L25 20Z' fill='none' stroke='rgba(201,153,63,0.08)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+    animation: drift 30s linear infinite;
+  }
+  @keyframes drift { from{background-position:0 0} to{background-position:60px 60px} }
+ 
+  .cover-badge {
+    display: inline-block;
+    border: 2px solid var(--gold);
+    border-radius: 30px;
+    padding: 6px 22px;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .cover h1 {
+    font-family: 'Amiri', serif;
+    font-size: clamp(28px, 6vw, 52px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .cover h2 {
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 400;
+    color: var(--light-gold);
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 30px;
+  }
+  .cover-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .stat-box {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(201,153,63,0.4);
+    border-radius: 12px;
+    padding: 14px 24px;
+    min-width: 110px;
+  }
+  .stat-box strong { font-size: 26px; color: var(--gold); display: block; }
+  .stat-box span { font-size: 12px; opacity: 0.8; }
+ 
+  /* ── NAV ── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--emerald);
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  .sticky-nav::-webkit-scrollbar { height: 3px; }
+  .sticky-nav::-webkit-scrollbar-thumb { background: var(--gold); }
+  .nav-btn {
+    color: rgba(255,255,255,0.75);
+    border: none;
+    background: none;
+    padding: 14px 18px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav-btn:hover, .nav-btn.active {
+    color: white;
+    border-bottom-color: var(--gold);
+    background: rgba(201,153,63,0.15);
+  }
+ 
+  /* ── SECTIONS ── */
+  .section { display: none; padding: 24px 16px 40px; max-width: 900px; margin: 0 auto; }
+  .section.active { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+ 
+  /* ── UNIT HEADER ── */
+  .unit-header {
+    background: linear-gradient(135deg, var(--emerald) 0%, #0d5535 100%);
+    border-radius: 16px;
+    padding: 28px 24px;
+    color: white;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .unit-header::after {
+    content: attr(data-num);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.06);
+    font-family: 'Cairo', sans-serif;
+  }
+  .unit-header h2 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .unit-header p { font-size: 14px; opacity: 0.8; }
+ 
+  /* ── LESSON CARD ── */
+  .lesson-card {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e8dcc8;
+    margin-bottom: 22px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .lesson-header {
+    background: linear-gradient(90deg, var(--light-gold) 0%, #fdf7e8 100%);
+    border-bottom: 2px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .lesson-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--emerald);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .lesson-title { font-size: 16px; font-weight: 700; color: var(--dark); flex: 1; }
+  .lesson-arrow { color: var(--emerald); font-size: 18px; transition: transform 0.3s; }
+  .lesson-body { padding: 20px; }
+ 
+  /* ── CONTENT ELEMENTS ── */
+  .def-box {
+    background: linear-gradient(135deg, #f0faf5 0%, #e8f7ef 100%);
+    border: 2px solid var(--emerald);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    position: relative;
+  }
+  .def-box::before {
+    content: '📖 تعريف';
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: var(--emerald);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+  }
+  .def-box p { font-size: 15px; line-height: 1.9; color: #1a4a30; margin-top: 6px; }
+ 
+  .quran-box {
+    background: linear-gradient(135deg, #fffbf0 0%, #fef8e4 100%);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-family: 'Amiri', serif;
+    font-size: 17px;
+    color: #5a3800;
+    text-align: center;
+    line-height: 2.2;
+  }
+  .quran-box small {
+    display: block;
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 8px;
+    font-style: normal;
+  }
+ 
+  .hadith-box {
+    background: #f8f0ff;
+    border-right: 4px solid #7c3aed;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-family: 'Amiri', serif;
+    font-size: 15px;
+    color: #3b1a6e;
+    line-height: 2;
+  }
+  .hadith-box small {
+    display: block;
+    font-family: 'Cairo', sans-serif;
+    font-size: 12px;
+    color: #7c3aed;
+    margin-top: 6px;
+  }
+ 
+  .points-list {
+    list-style: none;
+    margin: 12px 0;
+  }
+  .points-list li {
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-right: 3px solid var(--emerald);
+    font-size: 14px;
+    line-height: 1.7;
+    position: relative;
+  }
+  .points-list li::before {
+    content: '●';
+    color: var(--emerald);
+    margin-left: 8px;
+    font-size: 10px;
+  }
+ 
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--emerald);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin: 16px 0 10px;
+  }
+ 
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 14px 0;
+  }
+  @media(max-width:600px){ .grid-2{ grid-template-columns: 1fr; } }
+ 
+  .mini-card {
+    background: #f5f9f6;
+    border: 1px solid #c5dfc8;
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .mini-card h4 {
+    color: var(--emerald);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #c5dfc8;
+    padding-bottom: 6px;
+  }
+  .mini-card p, .mini-card ul { font-size: 13px; line-height: 1.8; color: #333; }
+  .mini-card ul { padding-right: 16px; }
+  .mini-card li { margin: 3px 0; }
+ 
+  .warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #7a5400;
+  }
+  .warning-box::before { content: '⚠️ '; }
+ 
+  .success-box {
+    background: #d4edda;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #1a4a28;
+  }
+  .success-box::before { content: '✅ '; }
+ 
+  .num-badge {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 22px;
+    margin-left: 6px;
+  }
+ 
+  /* ── TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  }
+  th {
+    background: var(--emerald);
+    color: white;
+    padding: 10px 14px;
+    text-align: right;
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f9fafb; }
+  tr:last-child td { border-bottom: none; }
+ 
+  /* ── QUICK REVIEW ── */
+  #review .section { display: block; }
+  .qa-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 12px 0;
+    overflow: hidden;
+  }
+  .qa-q {
+    background: var(--emerald);
+    color: white;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .qa-a {
+    display: none;
+    padding: 14px 16px;
+    background: #f5fdf8;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #1a3a28;
+    border-top: 1px solid #c5dfc8;
+  }
+  .qa-a.open { display: block; }
+ 
+  /* ── PROGRESS BAR ── */
+  .progress-bar-wrap {
+    background: #e0e0e0;
+    border-radius: 20px;
+    height: 6px;
+    margin: 8px 0 16px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--emerald), var(--gold));
+    transition: width 1s ease;
+  }
+ 
+  /* ── SCHEDULE ── */
+  .schedule-day {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin: 14px 0;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+  .day-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--emerald);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+  }
+  .schedule-tasks { flex: 1; }
+  .schedule-tasks h4 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    padding: 3px 0;
+    color: #555;
+  }
+  .task-item::before { content: '◆'; color: var(--gold); font-size: 8px; }
+ 
+  /* MAP */
+  .concept-map {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 14px 0;
+    text-align: center;
+  }
+  .map-center {
+    display: inline-block;
+    background: var(--emerald);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  .map-branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .map-branch {
+    background: var(--light-gold);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a2f00;
+  }
+ 
+  .tip-box {
+    background: linear-gradient(135deg, #e8f4fd 0%, #ddeeff 100%);
+    border-right: 4px solid #2196F3;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 13px;
+    color: #0d3a5e;
+  }
+  .tip-box::before { content: '💡 '; }
+</style>
+</head>
+<body>
+ 
+<!-- ═══ COVER ═══ -->
+<div class="cover">
+  <div class="cover-badge">📚 مذكرة مكثفة للتوجيهي</div>
+  <h1>التربية الإسلامية</h1>
+  <h2>الصف الحادي عشر · الفصل الدراسي الثاني</h2>
+  <div class="cover-divider"></div>
+  <div class="cover-stats">
+    <div class="stat-box"><strong>4</strong><span>وحدات</span></div>
+    <div class="stat-box"><strong>26</strong><span>درساً</span></div>
+    <div class="stat-box"><strong>كل</strong><span>ما تحتاجه للامتحان</span></div>
+  </div>
+</div>
+ 
+<!-- ═══ NAV ═══ -->
+<nav class="sticky-nav">
+  <button class="nav-btn active" onclick="showSection('u1')">📗 الوحدة الأولى</button>
+  <button class="nav-btn" onclick="showSection('u2')">📘 الوحدة الثانية</button>
+  <button class="nav-btn" onclick="showSection('u3')">📙 الوحدة الثالثة</button>
+  <button class="nav-btn" onclick="showSection('u4')">📕 الوحدة الرابعة</button>
+  <button class="nav-btn" onclick="showSection('review')">🔁 مراجعة سريعة</button>
+  <button class="nav-btn" onclick="showSection('schedule')">📅 خطة الدراسة</button>
+</nav>
+ 
+<!-- ═══════════════════════════════════════════════════
+     UNIT 1
+═══════════════════════════════════════════════════ -->
+<div id="u1" class="section active">
+ 
+  <div class="unit-header" data-num="1">
+    <h2>🕌 الوحدة الأولى</h2>
+    <p>سورة البقرة (284-286) · دلائل وجود الله · إعجاز القرآن · الأمر بالمعروف · اليوم الآخر · الاجتهاد</p>
+  </div>
+ 
+  <!-- ── LESSON 1 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">1</div>
+      <div class="lesson-title">سورة البقرة · الآيات (284 – 286)</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+ 
+      <div class="quran-box">
+        ﴿لِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ...﴾
+        <small>الآيات 284–286 من سورة البقرة · تُحفظ كاملةً</small>
+      </div>
+ 
+      <span class="section-label">📌 موضوعات الآيات الثلاث</span>
+ 
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>📍 الآية 284 · عظمة الله</h4>
+          <ul>
+            <li><strong>سعة ملك الله:</strong> كل ما في السماوات والأرض له</li>
+            <li><strong>سعة علم الله:</strong> يعلم الظاهر والخفي والنوايا</li>
+            <li><strong>رحمة الله وعدله:</strong> يغفر ويعذّب بعدله</li>
+            <li><strong>كمال قدرته:</strong> لا يعجزه شيء</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📍 الآية 285 · حقائق الإيمان</h4>
+          <ul>
+            <li>الإيمان بالله</li>
+            <li>الإيمان بالملائكة</li>
+            <li>الإيمان بالكتب</li>
+            <li>الإيمان بالرسل (دون تفريق)</li>
+            <li>الاستسلام لأمر الله والاستغفار</li>
+            <li>الإيمان بالبعث والحساب</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <span class="section-label">📌 الآية 286 · مبادئ الشريعة</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>أ. يُسر الشريعة</h4>
+          <p>الله لا يكلّف نفساً إلا وسعها · التكاليف ضمن طاقة الإنسان · إذا زادت المشقة تُشرع الرخصة (كالفطر للمريض)</p>
+        </div>
+        <div class="mini-card">
+          <h4>ب. مسؤولية الإنسان</h4>
+          <p>كل إنسان مسؤول عن عمله فقط · الله يحاسب على الظاهر والباطن · الحسنات تُيسّر، والسيئات ثقيلة على النفس</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">🤲 ادعية نهاية سورة البقرة</span>
+      <ul class="points-list">
+        <li><span class="num-badge">1</span> التجاوز عن النسيان والخطأ</li>
+        <li><span class="num-badge">2</span> رفع المشقة (لا تحمّلنا ما لا طاقة لنا به)</li>
+        <li><span class="num-badge">3</span> طلب العفو (ترك المعاقبة على الذنب)</li>
+        <li><span class="num-badge">4</span> طلب المغفرة (إسقاط الذنب)</li>
+        <li><span class="num-badge">5</span> طلب الرحمة (الإحسان والإنعام)</li>
+        <li><span class="num-badge">6</span> طلب النصر على الأعداء الظالمين</li>
+      </ul>
+ 
+      <div class="hadith-box">
+        «مَن قرأ بالآيتين من آخر سورة البقرة في ليلة كَفتاه»
+        <small>[رواه البخاري ومسلم] — كَفتاه: حفظتاه من المكروه</small>
+      </div>
+ 
+      <div class="tip-box">
+        سبب نزول الآية 286: لمّا نزلت آية المحاسبة على ما في النفس، ثقُلت على الصحابة، فأُنزلت هذه الآية رحمةً بهم.
+      </div>
+ 
+      <span class="section-label">💎 القيم المستفادة</span>
+      <ul class="points-list">
+        <li>مراقبة الله في السر والعلن</li>
+        <li>الإيمان الكامل بأركان الإيمان الستة</li>
+        <li>الاستغفار والتوبة من الذنوب</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <!-- ── LESSON 2 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">2</div>
+      <div class="lesson-title">دلائل وجود الله تعالى</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+ 
+      <div class="concept-map">
+        <div class="map-center">دلائل وجود الله</div>
+        <div class="map-branches">
+          <div class="map-branch">دليل الفطرة</div>
+          <div class="map-branch">الدلائل العقلية</div>
+          <div class="map-branch">الدلائل النقلية</div>
+        </div>
+      </div>
+ 
+      <span class="section-label">أولاً: دليل الفطرة</span>
+      <div class="def-box">
+        <p>ما أودعه الله في قلب الإنسان من اطمئنان بوجود موجِد لهذا الكون — الإنسان يشعر فطرياً بوجود قوة أعلى منه، خاصةً في أوقات الشدة.</p>
+      </div>
+      <div class="hadith-box">
+        «ما من مولودٍ إلا يولد على الفطرة، فأبواه يُهوِّدانه، أو يُنصِّرانه، أو يُمجِّسانه»
+        <small>[رواه البخاري ومسلم]</small>
+      </div>
+ 
+      <span class="section-label">ثانياً: الدلائل العقلية</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>أ. دليل السببية</h4>
+          <p>العقل لا يقبل شيئاً من غير موجد له · لا بد للمخلوقات من خالق · اليشء كان عدماً فكيف يخلق نفسه؟</p>
+        </div>
+        <div class="mini-card">
+          <h4>ب. دليل الإتقان</h4>
+          <p>الدقة في خلق الكون لا تصدر إلا عن خالق مبدع · الدقة في خلق الإنسان · دقة حركة الكواكب والنجوم</p>
+        </div>
+      </div>
+      <div class="mini-card" style="margin-top:12px;">
+        <h4>ج. دليل الهداية</h4>
+        <p>وجود نظام دقيق يهدي كل مخلوق لما يناسبه — النحل يبني الخلية، والطير يهاجر، والإنسان يُفكر — لا بد من موجِّه حكيم.</p>
+      </div>
+ 
+      <span class="section-label">ثالثاً: الدلائل النقلية</span>
+      <ul class="points-list">
+        <li>آيات القرآن الكريم التي تثبت وجود الله بالبرهان</li>
+        <li>الأحاديث النبوية التي تؤكد عظمة الله وقدرته</li>
+        <li>وجود الأنبياء والمعجزات دليل على وجود مُرسِل</li>
+      </ul>
+ 
+      <span class="section-label">🛡 الرد على شبهات المنكرين</span>
+      <table>
+        <tr><th>الشبهة</th><th>الرد</th></tr>
+        <tr><td>الكون وُجد بالصدفة</td><td>النظام الدقيق المُحكم لا يمكن أن يكون صدفة — الصدفة لا تُنتج نظاماً</td></tr>
+        <tr><td>العلم ينفي وجود الله</td><td>كلما ارتقى الإنسان في علمه قوي إيمانه بعظمة الخالق</td></tr>
+        <tr><td>لا نرى الله</td><td>نرى آثار قدرته في كل مكان، كما نحس بالريح دون أن نراها</td></tr>
+      </table>
+    </div>
+  </div>
+ 
+  <!-- ── LESSON 3 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">3</div>
+      <div class="lesson-title">إعجاز القرآن الكريم</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>إعجاز القرآن:</strong> عجز البشر عن الإتيان بمثله أو بمثل سورة منه، وهو دليل على أنه من عند الله.</p>
+      </div>
+ 
+      <span class="section-label">وجوه الإعجاز</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>🔤 الإعجاز اللغوي والبياني</h4>
+          <ul>
+            <li>أسلوب فريد لا يشبه الشعر ولا النثر</li>
+            <li>عجز أفصح العرب عن معارضته</li>
+            <li>الجمال الموسيقي والبلاغي</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>🔬 الإعجاز العلمي</h4>
+          <ul>
+            <li>حقائق علمية لم تُكتشف إلا حديثاً</li>
+            <li>أسرار الكون والطب والجنين</li>
+            <li>لا يوجد فيه خطأ علمي واحد</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📰 الإعجاز الغيبي</h4>
+          <ul>
+            <li>أخبر بأحداث قبل وقوعها وتحققت</li>
+            <li>انتصار الروم بعد هزيمتهم</li>
+            <li>دخول المسلمين مكة المكرمة</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📜 إعجاز التشريع</h4>
+          <ul>
+            <li>أحكام جاءت بما يحقق السعادة</li>
+            <li>أنظمة اجتماعية وسياسية واقتصادية متكاملة</li>
+            <li>صالحة لكل زمان ومكان</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <div class="success-box">
+        التحدي الأكبر: تحداهم بسورة واحدة من مثله، فعجزوا. ولو كان من كلام البشر لأمكن معارضته.
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── LESSON 4 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">4</div>
+      <div class="lesson-title">الأمر بالمعروف والنهي عن المنكر</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+ 
+      <div class="def-box">
+        <p><strong>الأمر بالمعروف والنهي عن المنكر:</strong> دعوة الناس إلى كل خير وفضيلة، ونهيهم عن كل شر ورذيلة؛ ما يؤدي إلى حفظ المجتمع والدولة. <br><strong>حكمه:</strong> فرض كفاية على المسلمين.</p>
+      </div>
+ 
+      <span class="section-label">أهميته</span>
+      <ul class="points-list">
+        <li><strong>أ.</strong> نيل السعادة والفلاح في الدنيا والآخرة</li>
+        <li><strong>ب.</strong> تحقيق خيرية الأمة الإسلامية</li>
+        <li><strong>ج.</strong> استقرار المجتمع وأمن الوطن وسلامته</li>
+      </ul>
+ 
+      <div class="hadith-box">
+        مثَل المجتمع الذي يترك الأمر بالمعروف: «مثل القائم على حدود الله والواقع فيها كمثل قوم اقتسموا سفينةً... فإن يتركوهم وما أرادوا هلكوا جميعاً، وإن أخذوا على أيديهم نجوا ونجوا جميعاً»
+        <small>[رواه البخاري]</small>
+      </div>
+ 
+      <span class="section-label">ضوابطه وآدابه</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الضوابط</h4>
+          <ul>
+            <li>العلم بما يأمر به وينهى عنه</li>
+            <li>العمل بما يأمر الناس به</li>
+            <li>الصبر على الناس</li>
+            <li>البُعد عما ينهاهم عنه</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>الآداب</h4>
+          <ul>
+            <li>الحكمة والموعظة الحسنة</li>
+            <li>الرفق بالناس</li>
+            <li>اختيار الأسلوب المناسب</li>
+            <li>الإخلاص لله تعالى</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <span class="section-label">⚠️ خطورة تركه</span>
+      <ul class="points-list">
+        <li>انتشار الفساد في المجتمع</li>
+        <li>استحقاق عذاب الله تعالى</li>
+        <li>زوال نعمة الأمن والاستقرار</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <!-- ── LESSON 5 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">5</div>
+      <div class="lesson-title">اليوم الآخر: أحداثه وآثار الإيمان به</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+ 
+      <div class="def-box">
+        <p><strong>الإيمان باليوم الآخر:</strong> الاعتقاد الجازم بوجود يوم سيبعث الله فيه الناس للحساب والجزاء، وهو ركن من أركان الإيمان.</p>
+      </div>
+ 
+      <span class="section-label">أسماء اليوم الآخر في القرآن</span>
+      <div class="map-branches" style="margin:12px 0;">
+        <div class="map-branch">يوم الدين</div>
+        <div class="map-branch">يوم الحساب</div>
+        <div class="map-branch">يوم القيامة</div>
+        <div class="map-branch">القارعة</div>
+        <div class="map-branch">الساعة</div>
+        <div class="map-branch">يوم البعث</div>
+        <div class="map-branch">الواقعة</div>
+        <div class="map-branch">يوم الفصل</div>
+      </div>
+ 
+      <span class="section-label">أحداث اليوم الآخر بالترتيب</span>
+      <table>
+        <tr><th>#</th><th>الحدث</th><th>الشرح المختصر</th></tr>
+        <tr><td>1</td><td><strong>النفخة الأولى</strong> (نفخة الموت)</td><td>يأمر الله الملَك بالنفخ في الصور فيموت كل من في السماوات والأرض، وتنتهي الحياة الدنيا</td></tr>
+        <tr><td>2</td><td><strong>النفخة الثانية</strong> (نفخة البعث)</td><td>النفخ مرة أخرى فيُبعث الناس من قبورهم أحياء</td></tr>
+        <tr><td>3</td><td><strong>الحشر</strong></td><td>جمع المخلوقات كافة في مكان واحد يُسمى المحشر</td></tr>
+        <tr><td>4</td><td><strong>الشفاعة الكبرى</strong></td><td>حين يطول انتظار الناس، يشفع النبي ﷺ لبدء الحساب</td></tr>
+        <tr><td>5</td><td><strong>العرض والحساب</strong></td><td>حساب كل إنسان على ما قدّم في الدنيا</td></tr>
+        <tr><td>6</td><td><strong>دخول الجنة أو النار</strong></td><td>المؤمنون إلى الجنة، والكافرون إلى النار</td></tr>
+      </table>
+ 
+      <span class="section-label">آثار الإيمان باليوم الآخر</span>
+      <ul class="points-list">
+        <li>ضبط سلوك الإنسان في الحياة الدنيا</li>
+        <li>الإقبال على الطاعات والأعمال الصالحة</li>
+        <li>الكف عن المعاصي والذنوب</li>
+        <li>الشفاعة الصغرى: التشفع في الناس عند الله يوم القيامة</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <!-- ── LESSON 6 ── -->
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">6</div>
+      <div class="lesson-title">الاجتهاد في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+ 
+      <div class="def-box">
+        <p><strong>الاجتهاد:</strong> بذل العالم وُسعه وطاقته في استنباط الأحكام الشرعية العملية التي لم يرد فيها نص قطعي يُبيّن الحكم بصورة مباشرة.</p>
+        <p style="margin-top:8px;"><strong>حكمه:</strong> واجب على علماء المسلمين في كل عصر.</p>
+      </div>
+ 
+      <div class="warning-box">
+        لا يجوز الاجتهاد في المسائل قطعية الدلالة: كوجوب الصلوات الخمس، وصوم رمضان، ونصيب الورثة من الميراث.
+      </div>
+ 
+      <span class="section-label">شروط المجتهد</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الشروط الدينية</h4>
+          <ul>
+            <li>الإسلام والبلوغ والعقل</li>
+            <li>العدالة والتقوى</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>الشروط العلمية</h4>
+          <ul>
+            <li>العلم بأصول الشريعة الإسلامية</li>
+            <li>التمكن من اللغة العربية</li>
+            <li>العلم بأصول الفقه وقواعده</li>
+            <li>الاطلاع على مستجدات العصر</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <span class="section-label">الاجتهاد الجماعي ودوره</span>
+      <ul class="points-list">
+        <li>المجامع الفقهية تجمع علماء المسلمين لدراسة القضايا المستجدة</li>
+        <li>رأي الجماعة أصوب من الفرد</li>
+        <li>أمثلة: أطفال الأنابيب، الصلاة في الطائرة، زراعة الأعضاء</li>
+      </ul>
+ 
+      <span class="section-label">أهمية الاجتهاد</span>
+      <ul class="points-list">
+        <li>يجعل الشريعة مواكبة لمستجدات العصر</li>
+        <li>يحل المسائل الجديدة وفق مبادئ الإسلام</li>
+        <li>يدل على مرونة الشريعة وصلاحيتها لكل زمان</li>
+      </ul>
+    </div>
+  </div>
+ 
+</div><!-- end u1 -->
+ 
+<!-- ═══════════════════════════════════════════════════
+     UNIT 2
+═══════════════════════════════════════════════════ -->
+<div id="u2" class="section">
+ 
+  <div class="unit-header" data-num="2">
+    <h2>🌙 الوحدة الثانية</h2>
+    <p>سورة الأعراف (31-34) · مراعاة المصالح · السنة النبوية · الحديث الشريف · رسائل النبي ﷺ · تبوك · حقوق المرأة</p>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">1</div>
+      <div class="lesson-title">سورة الأعراف · الآيات (31 – 34)</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="quran-box">
+        ﴿يَا بَنِي آدَمَ خُذُوا زِينَتَكُمْ عِندَ كُلِّ مَسْجِدٍ وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا...﴾
+        <small>الآيات 31–34 من سورة الأعراف · تُحفظ كاملةً</small>
+      </div>
+ 
+      <span class="section-label">موضوعات الآيات</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>📍 آية 31 · وسطية الإسلام</h4>
+          <ul>
+            <li>الأمر بالزينة عند المساجد</li>
+            <li>إباحة الأكل والشرب</li>
+            <li>النهي عن الإسراف</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📍 آية 32 · إباحة الطيبات</h4>
+          <ul>
+            <li>الزينة والطيبات من الرزق حلال</li>
+            <li>هي للمؤمنين في الدنيا وخالصة لهم في الآخرة</li>
+            <li>تفصيل الآيات لمن يعلمون</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📍 آية 33 · المحرمات</h4>
+          <ul>
+            <li>الفواحش ظاهرها وباطنها</li>
+            <li>الإثم والبغي بغير حق</li>
+            <li>الإشراك بالله</li>
+            <li>القول على الله بغير علم</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>📍 آية 34 · الأجل المحتوم</h4>
+          <ul>
+            <li>لكل أمة أجل محدد</li>
+            <li>لا يستأخرون ساعة ولا يستقدمون</li>
+            <li>سنة الله في الكون لا تتبدل</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <div class="hadith-box">
+        «كلوا واشربوا والبسوا وتصدقوا في غير إسراف ولا مَيلة»
+        <small>[رواه البخاري] — مَيلة: التكبر</small>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">2</div>
+      <div class="lesson-title">مراعاة المصالح في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>المصلحة:</strong> المنفعة التي تحصل للناس عن طريق جلب النفع لهم، أو دفع الضرر عنهم.</p>
+      </div>
+ 
+      <span class="section-label">أنواع المصالح</span>
+      <table>
+        <tr><th>النوع</th><th>التعريف</th><th>مثال</th></tr>
+        <tr><td><strong>المصالح المعتبرة</strong></td><td>قبلها الشرع وأخذ بها</td><td>استحباب نظر الخاطب للمخطوبة (لتحقيق الألفة)</td></tr>
+        <tr><td><strong>المصالح الملغاة</strong></td><td>ردّها الشرع لأنها تُعارض نصاً</td><td>ادعاء مصلحة في أمر نهى الله عنه</td></tr>
+        <tr><td><strong>المصالح المرسلة</strong></td><td>لم يعتبرها الشرع ولم يُلغِها</td><td>تدوين السنة النبوية، تأسيس الوزارات</td></tr>
+      </table>
+ 
+      <span class="section-label">ضوابط المصلحة (شروطها)</span>
+      <ul class="points-list">
+        <li>أن تكون حقيقية (لا وهمية)</li>
+        <li>أن تكون عامة (لا خاصة بفرد أو جماعة)</li>
+        <li>ألّا تُعارض حكماً ثبت بنص أو إجماع</li>
+      </ul>
+ 
+      <span class="section-label">مقاصد الشريعة الخمسة</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الضروريات الخمس</h4>
+          <ul>
+            <li>🕌 حفظ الدين</li>
+            <li>👤 حفظ النفس</li>
+            <li>🧠 حفظ العقل</li>
+            <li>👨‍👩‍👧 حفظ النسل</li>
+            <li>💰 حفظ المال</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>أمثلة على الحفاظ عليها</h4>
+          <ul>
+            <li>إقامة الصلاة والجهاد (الدين)</li>
+            <li>تحريم القتل (النفس)</li>
+            <li>تحريم الخمر (العقل)</li>
+            <li>تحريم الزنا (النسل)</li>
+            <li>تحريم السرقة (المال)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">3</div>
+      <div class="lesson-title">جهود علماء المسلمين في الحفاظ على السنة النبوية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>السنة النبوية:</strong> المصدر الثاني للتشريع، وهي وحي من الله بالمعنى دون اللفظ. قال تعالى: ﴿وَمَا يَنطِقُ عَنِ الْهَوَىٰ﴾</p>
+      </div>
+ 
+      <span class="section-label">مراحل الجمع والتدوين</span>
+      <table>
+        <tr><th>المرحلة</th><th>التفاصيل</th></tr>
+        <tr><td>عهد النبي ﷺ</td><td>الحفظ في الصدور أساساً · نُهي في البداية عن كتابة الحديث لئلا يُخلط بالقرآن · أُذن لبعض الصحابة بالكتابة</td></tr>
+        <tr><td>عهد الصحابة</td><td>الاهتمام بالحفظ والرواية · بداية التدوين الفردي</td></tr>
+        <tr><td>عهد عمر بن عبد العزيز</td><td>أمر رسمياً بجمع السنة وتدوينها (أوائل القرن الثاني الهجري)</td></tr>
+        <tr><td>القرن الثالث الهجري</td><td>عصر التصنيف والتبويب — الصحاح والسنن والمسانيد</td></tr>
+      </table>
+ 
+      <span class="section-label">أساليب تصنيف السنة</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>أ. حسب الأبواب الفقهية</h4>
+          <p>الصحاح والسنن — كصحيح البخاري ومسلم وسنن أبي داود والترمذي</p>
+        </div>
+        <div class="mini-card">
+          <h4>ب. حسب أسماء الرواة</h4>
+          <p>المسانيد — تُرتَّب أحاديث كل صحابي معاً</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">جهود العصر الحديث</span>
+      <ul class="points-list">
+        <li>الدفاع عن السنة ورد الشبهات</li>
+        <li>إنشاء مواقع إلكترونية تُعنى بنشر السنة</li>
+        <li>برامج الحاسوب والفهارس الرقمية للبحث في الأحاديث</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">4</div>
+      <div class="lesson-title">الحديث الشريف: منهج الإسلام في الحياة</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="hadith-box">
+        «كلوا واشربوا والبسوا وتصدقوا في غير إسراف ولا مَخيلة»
+        <small>نهج الإسلام: التوازن بين الروح والجسد، الفرد والمجتمع</small>
+      </div>
+      <span class="section-label">منهج الإسلام في الحياة</span>
+      <ul class="points-list">
+        <li>الوسطية: بين الإفراط والتفريط</li>
+        <li>الشمولية: ينظّم العلاقة بالله وبالناس وبالكون</li>
+        <li>الواقعية: يراعي الطبيعة البشرية وحاجات الإنسان</li>
+        <li>التوازن: بين متطلبات الدنيا وعبادة الآخرة</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">5</div>
+      <div class="lesson-title">رسائل النبي ﷺ إلى الملوك والزعماء</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="tip-box">
+        أرسل النبي ﷺ رسائله بعد صلح الحديبية (السنة السادسة للهجرة) — ختمها بخاتم فضة نقش عليه: «محمد رسول الله».
+      </div>
+ 
+      <span class="section-label">الرسائل داخل الجزيرة العربية</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>رسالة إلى ملك البحرين (المنذر بن ساوى)</h4>
+          <p>أرسل الصحابي العلاء بن الحضرمي · نتج عنها إسلام ملك البحرين وأهلها</p>
+        </div>
+        <div class="mini-card">
+          <h4>رسالة إلى مَلِكَي عُمان</h4>
+          <p>إلى جيفر وعبد ابني الجلندى · نتج عنها إسلامهما وإسلام أهل عُمان</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">الرسائل خارج الجزيرة العربية</span>
+      <table>
+        <tr><th>المُرسَل إليه</th><th>الملك / الحاكم</th><th>النتيجة</th></tr>
+        <tr><td>هرقل (الروم)</td><td>قيصر الروم</td><td>قرأ الرسالة واعترف بنبوته ﷺ لكن خاف على ملكه</td></tr>
+        <tr><td>كسرى (الفرس)</td><td>خسرو برويز</td><td>مزّق الرسالة · دعا عليه النبي ﷺ فمُزِّق ملكه</td></tr>
+        <tr><td>النجاشي (الحبشة)</td><td>ملك الحبشة</td><td>آمن بالنبي ﷺ وأسلم</td></tr>
+        <tr><td>المقوقس (مصر)</td><td>حاكم مصر</td><td>أكرم الرسالة وأرسل هدايا ولم يُسلم</td></tr>
+      </table>
+ 
+      <div class="success-box">
+        هذه الرسائل دليل على عالمية رسالة الإسلام — لم يكن الإسلام لقوم بعينهم بل للناس كافة.
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">6</div>
+      <div class="lesson-title">يوم تبوك (9 هـ)</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <span class="section-label">سبب الغزوة</span>
+      <ul class="points-list">
+        <li>وصلت أخبار بأن الروم يجهزون جيشاً للهجوم على المسلمين</li>
+        <li>قَبل هذا كانت معركة مؤتة أول لقاء بين المسلمين والروم</li>
+      </ul>
+ 
+      <span class="section-label">أحداث تبوك</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>تجهيز الجيش</h4>
+          <p>جهّز الصحابة جيشاً كبيراً رغم الحر الشديد والظروف الصعبة · تبرع عثمان بن عفان ﵁ بتجهيز ثلث الجيش</p>
+        </div>
+        <div class="mini-card">
+          <h4>تآمر المنافقين</h4>
+          <p>حاول المنافقون ثني المسلمين عن الخروج · بنوا مسجد الضرار لإضعاف المسلمين</p>
+        </div>
+        <div class="mini-card">
+          <h4>خروج الجيش</h4>
+          <p>خرج النبي ﷺ بأكثر من 30,000 مقاتل · ذهبوا إلى تبوك فلم يجدوا الروم · عقد النبي ﷺ معاهدات مع قبائل المنطقة</p>
+        </div>
+        <div class="mini-card">
+          <h4>المتخلفون</h4>
+          <p>اعتذر بعضهم بأعذار كاذبة (المنافقون) · وتاب ثلاثة صحابة بعد إعلان براءتهم (كعب بن مالك وصاحباه)</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">العِبَر والدروس</span>
+      <ul class="points-list">
+        <li>ضرورة الاستعداد والقوة لرد العدوان</li>
+        <li>التضحية والبذل في سبيل الله</li>
+        <li>خطر النفاق والتخاذل على المجتمع</li>
+        <li>التوبة الصادقة مقبولة عند الله</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">7</div>
+      <div class="lesson-title">الحقوق السياسية للمرأة في الإسلام</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <span class="section-label">حقوق المرأة السياسية في الإسلام</span>
+      <ul class="points-list">
+        <li><strong>حق المشاركة السياسية:</strong> حق الشورى والرأي في شؤون المجتمع</li>
+        <li><strong>حق الانتخاب والترشح:</strong> المشاركة في اتخاذ القرار</li>
+        <li><strong>حق القيادة:</strong> توليّ المناصب القيادية وفق الضوابط الشرعية</li>
+        <li><strong>الأمر بالمعروف والنهي عن المنكر:</strong> واجب على المرأة كالرجل</li>
+      </ul>
+ 
+      <div class="success-box">
+        المرأة في الإسلام شريكة الرجل في المسؤولية وليست تابعة — كانت الصحابيات يُشارِكن في استشارات النبي ﷺ وينهين المجتمع عن الفحشاء.
+      </div>
+    </div>
+  </div>
+ 
+</div><!-- end u2 -->
+ 
+<!-- ═══════════════════════════════════════════════════
+     UNIT 3
+═══════════════════════════════════════════════════ -->
+<div id="u3" class="section">
+ 
+  <div class="unit-header" data-num="3">
+    <h2>⚖️ الوحدة الثالثة</h2>
+    <p>سورة الفرقان (63-77) · الطلاق · العدة · الوصية · الميراث · خصائص الشريعة · الوقف</p>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">1</div>
+      <div class="lesson-title">سورة الفرقان · الآيات (63 – 77)</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="quran-box">
+        ﴿وَعِبَادُ الرَّحْمَٰنِ الَّذِينَ يَمْشُونَ عَلَى الْأَرْضِ هَوْنًا...﴾
+        <small>الآيات 63–77 من سورة الفرقان · تُحفظ كاملةً</small>
+      </div>
+ 
+      <span class="section-label">صفات عباد الرحمن (الآيات 63-77)</span>
+      <table>
+        <tr><th>#</th><th>الصفة</th><th>الدلالة</th></tr>
+        <tr><td>1</td><td>يمشون على الأرض هَوناً</td><td>التواضع والوقار في المشي</td></tr>
+        <tr><td>2</td><td>إذا خاطبهم الجاهلون قالوا سلاماً</td><td>الحلم وعدم الانتقام</td></tr>
+        <tr><td>3</td><td>يبيتون ساجدين وقياماً</td><td>إحياء الليل بالصلاة والذكر</td></tr>
+        <tr><td>4</td><td>يدعون: ربنا اصرف عنا عذاب جهنم</td><td>الخوف من الله وطلب النجاة</td></tr>
+        <tr><td>5</td><td>لا يُسرفون ولا يَقتُرون بل قواماً</td><td>الوسطية في الإنفاق</td></tr>
+        <tr><td>6</td><td>لا يدعون مع الله إلهاً آخر</td><td>التوحيد الخالص</td></tr>
+        <tr><td>7</td><td>لا يقتلون النفس إلا بالحق</td><td>صون الحياة الإنسانية</td></tr>
+        <tr><td>8</td><td>لا يزنون</td><td>صون الشرف والعِرض</td></tr>
+        <tr><td>9</td><td>من تاب وآمن وعمل صالحاً يُبدّل الله سيئاته حسنات</td><td>رحمة الله وقبول التوبة</td></tr>
+        <tr><td>10</td><td>لا يشهدون الزور وإذا مروا باللغو مروا كراماً</td><td>صون اللسان وحفظ الكرامة</td></tr>
+        <tr><td>11</td><td>يذكّرون بآيات ربهم ولم يخروا عليها صماً وعمياناً</td><td>التدبر والوعي الديني</td></tr>
+        <tr><td>12</td><td>يدعون: هب لنا من أزواجنا وذرياتنا قرة أعين</td><td>الدعاء لبناء الأسرة الصالحة</td></tr>
+      </table>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">2</div>
+      <div class="lesson-title">الطلاق في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>الطلاق:</strong> حل عقدة الزواج بلفظ صريح أو كناية من الزوج. <strong>حكمه:</strong> مباح ولكنه أبغض الحلال إلى الله.</p>
+      </div>
+ 
+      <span class="section-label">أنواع الطلاق</span>
+      <table>
+        <tr><th>النوع</th><th>المعنى</th></tr>
+        <tr><td><strong>الطلاق الرجعي</strong></td><td>طلاق واحد أو اثنان، للزوج حق الرجعة دون عقد جديد في فترة العدة</td></tr>
+        <tr><td><strong>الطلاق البائن بينونة صغرى</strong></td><td>طلاق ثلاث مجتمعة أو انتهاء العدة — يحق له إعادتها بعقد ومهر جديدين برضاها</td></tr>
+        <tr><td><strong>الطلاق البائن بينونة كبرى</strong></td><td>الطلاق الثالث — لا تحل له حتى تنكح زوجاً غيره (المحلّل)</td></tr>
+      </table>
+ 
+      <span class="section-label">حكمة الإسلام في الطلاق</span>
+      <ul class="points-list">
+        <li>آخر الحلول بعد استنفاد كل وسائل الإصلاح</li>
+        <li>الفرصة للمراجعة والتفكر أمام تدمير الأسرة</li>
+        <li>حماية الزوجة من الظلم والإضرار بها</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">3</div>
+      <div class="lesson-title">العِدّة في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>العِدّة:</strong> المدة الزمنية التي تنتظرها المرأة بعد الطلاق أو وفاة الزوج قبل أن تتزوج.</p>
+      </div>
+ 
+      <span class="section-label">أنواع العدة</span>
+      <table>
+        <tr><th>الحالة</th><th>مدة العدة</th></tr>
+        <tr><td>المطلقة من يدخل بها (ذات حيض)</td><td>ثلاثة قروء (حيضات)</td></tr>
+        <tr><td>المطلقة اليائسة أو الصغيرة</td><td>ثلاثة أشهر</td></tr>
+        <tr><td>المطلقة قبل الدخول</td><td>لا عدة عليها</td></tr>
+        <tr><td>المتوفى عنها زوجها</td><td>أربعة أشهر وعشرة أيام</td></tr>
+        <tr><td>الحامل (مطلقة أو متوفى عنها)</td><td>حتى الوضع</td></tr>
+      </table>
+ 
+      <span class="section-label">الحكمة من العدة</span>
+      <ul class="points-list">
+        <li>التأكد من براءة الرحم (لمعرفة نسب الأولاد)</li>
+        <li>إتاحة الفرصة للمراجعة والتفكير في الرجعة</li>
+        <li>تكريم عشرة الزوجين ومراعاة علاقتهما</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">4</div>
+      <div class="lesson-title">الوصية في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>الوصية:</strong> تمليك مضاف إلى ما بعد الموت — أي التصرف في المال والحقوق بعد الوفاة. <strong>حكمها:</strong> مستحبة لمن عنده مال.</p>
+      </div>
+ 
+      <span class="section-label">شروط الوصية</span>
+      <ul class="points-list">
+        <li>ألا تتجاوز <strong>ثُلث المال</strong> (الثلث فأقل)</li>
+        <li>ألا تكون لوارث (الوصية للوارث باطلة)</li>
+        <li>أن يكون الموصي عاقلاً بالغاً</li>
+        <li>أن تكون في أمر مباح</li>
+      </ul>
+ 
+      <span class="section-label">الحكمة من الوصية</span>
+      <ul class="points-list">
+        <li>إتاحة الفرصة للصدقة الجارية بعد الموت</li>
+        <li>صلة الأرحام الذين لا يرثون</li>
+        <li>قضاء ما تعذّر أداؤه في الحياة</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">5</div>
+      <div class="lesson-title">الميراث في الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>الميراث (الإرث):</strong> انتقال ما يخلّفه الميت من مال وحقوق إلى ورثته الأحياء وفق أحكام الشريعة الإسلامية.</p>
+      </div>
+ 
+      <span class="section-label">شروط الإرث (يجب توافرها)</span>
+      <ul class="points-list">
+        <li>وفاة المورّث (صاحب المال)</li>
+        <li>تحقق حياة الوارث لحظة وفاة المورّث</li>
+        <li>معرفة وجه القرابة بين الوارث والمورّث</li>
+      </ul>
+ 
+      <span class="section-label">موانع الإرث (تحجب الميراث)</span>
+      <ul class="points-list">
+        <li><strong>القتل العمد:</strong> من قتل مورّثه عمداً لا يرثه</li>
+        <li><strong>اختلاف الدين:</strong> لا يرث المسلم الكافر ولا العكس</li>
+        <li><strong>الرق:</strong> العبد لا يرث</li>
+      </ul>
+ 
+      <span class="section-label">أصحاب الفروض المقدرة</span>
+      <table>
+        <tr><th>الفرض</th><th>أصحابه</th></tr>
+        <tr><td>النصف (½)</td><td>البنت الواحدة، وبنت الابن، والأخت لأبوين، والزوج إذا لم يكن ولد</td></tr>
+        <tr><td>الربع (¼)</td><td>الزوج مع الولد، الزوجة بدون ولد</td></tr>
+        <tr><td>الثمن (⅛)</td><td>الزوجة مع الولد</td></tr>
+        <tr><td>الثلثان (⅔)</td><td>البنتان فأكثر</td></tr>
+        <tr><td>الثلث (⅓)</td><td>الأم مع عدم الولد والإخوة، والإخوة لأم (اثنان فأكثر)</td></tr>
+        <tr><td>السدس (⅙)</td><td>الأب أو الأم مع الولد، والجد، وبنت الابن مع البنت</td></tr>
+      </table>
+ 
+      <div class="success-box">
+        الحكمة من الميراث: تحقيق العدل في توزيع الثروة · منع احتكار المال · تقوية أواصر الأسرة والمجتمع
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">6</div>
+      <div class="lesson-title">من خصائص الشريعة الإسلامية: الوسطية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>الوسطية:</strong> منهج إسلامي يقوم على الاعتدال والتوازن بين الطرفين المتقابلين، بعيداً عن الإفراط والتفريط.</p>
+      </div>
+ 
+      <span class="section-label">مجالات الوسطية</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>في العقيدة</h4>
+          <p>بين الإفراط (التشبيه) والتفريط (التعطيل) في صفات الله</p>
+        </div>
+        <div class="mini-card">
+          <h4>في العبادة</h4>
+          <p>بين الغلو والتساهل — لا تُشدد على نفسك فتعجز</p>
+        </div>
+        <div class="mini-card">
+          <h4>في الإنفاق</h4>
+          <p>بين الإسراف والتقتير — ﴿وَلَا تَجْعَلْ يَدَكَ مَغْلُولَةً...﴾</p>
+        </div>
+        <div class="mini-card">
+          <h4>في العلاقات</h4>
+          <p>بين التشدد والتساهل في المعاملة مع الآخرين</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">مظاهر الوسطية في الشريعة</span>
+      <ul class="points-list">
+        <li>وجود الرخص عند الاضطرار (الفطر للمريض)</li>
+        <li>مراعاة المصالح في التشريع</li>
+        <li>التدرج في الأحكام</li>
+        <li>رفع الحرج عن المكلفين</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">7</div>
+      <div class="lesson-title">مجالات الوقف ودوره في التنمية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>الوقف:</strong> حبس الأصل وتسبيل الثمرة — أي تجميد الأصل وإنفاق ريعه في أوجه الخير.</p>
+      </div>
+ 
+      <span class="section-label">مجالات الوقف</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الوقف الديني</h4>
+          <ul>
+            <li>بناء المساجد وتشغيلها</li>
+            <li>المدارس الدينية والجامعات</li>
+            <li>طبع المصاحف ونشرها</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>الوقف التعليمي</h4>
+          <ul>
+            <li>المدارس والجامعات</li>
+            <li>المكتبات العامة</li>
+            <li>منح للطلاب</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>الوقف الصحي</h4>
+          <ul>
+            <li>المستشفيات والمراكز الصحية</li>
+            <li>رعاية الفقراء والمرضى</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>الوقف الاجتماعي</h4>
+          <ul>
+            <li>رعاية الأيتام والأرامل</li>
+            <li>توفير المسكن لمحدودي الدخل</li>
+            <li>الإنفاق على مشاريع الخير</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <span class="section-label">دور الوقف في التنمية</span>
+      <ul class="points-list">
+        <li>توفير دخل مستمر لمشاريع الخير</li>
+        <li>تقليل الفقر والمحتاجين في المجتمع</li>
+        <li>الصدقة الجارية التي ينتفع بها صاحبها بعد موته</li>
+        <li>تحقيق التكافل الاجتماعي</li>
+      </ul>
+    </div>
+  </div>
+ 
+</div><!-- end u3 -->
+ 
+<!-- ═══════════════════════════════════════════════════
+     UNIT 4
+═══════════════════════════════════════════════════ -->
+<div id="u4" class="section">
+ 
+  <div class="unit-header" data-num="4">
+    <h2>🌟 الوحدة الرابعة</h2>
+    <p>حديث الإفلاس · مقاصد الشريعة · مكافحة الجريمة · وصايا النبي ﷺ · المسؤولية المجتمعية · حقوق الإنسان</p>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">1</div>
+      <div class="lesson-title">الحديث الشريف: مفهوم الإفلاس بين الدنيا والآخرة</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="hadith-box">
+        «إن المفلس من أمتي يأتي يوم القيامة بصلاةٍ وصيامٍ وزكاةٍ، ويأتي قد شتم هذا، وقذف هذا، وأكل مال هذا، وسفك دم هذا، وضرب هذا، فيُعطى هذا من حسناته وهذا من حسناته، فإن فنيت حسناته قبل أن يُقضى ما عليه أُخذ من خطاياهم فطُرحت عليه، ثم طُرح في النار»
+        <small>[رواه مسلم] — عن أبي هريرة ﵁</small>
+      </div>
+ 
+      <span class="section-label">معاني المفردات</span>
+      <table>
+        <tr><th>الكلمة</th><th>المعنى</th></tr>
+        <tr><td>قذف</td><td>اتّهم بالزنا (وهو من كبائر الذنوب)</td></tr>
+        <tr><td>سفك</td><td>أراق الدم</td></tr>
+        <tr><td>فنيت</td><td>انتهت وتمت</td></tr>
+        <tr><td>طُرحت عليه</td><td>أُلقيت عليه</td></tr>
+      </table>
+ 
+      <span class="section-label">موضوعات الحديث</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الإفلاس الدنيوي</h4>
+          <p>من لا درهم له ولا متاع (مفلس دنيا)</p>
+        </div>
+        <div class="mini-card">
+          <h4>الإفلاس الأخروي الحقيقي</h4>
+          <p>من يأتي بأعمال صالحة لكنه ظلم الناس فتُنقل حسناته إليهم حتى تنتهي ثم تُحمل سيئاتهم عليه</p>
+        </div>
+      </div>
+ 
+      <span class="section-label">القيم المستفادة</span>
+      <ul class="points-list">
+        <li>العبادة وحدها لا تنفع مع ظلم الناس</li>
+        <li>حقوق الله تُغفر بالتوبة — أما حقوق الناس فلا بد من ردها</li>
+        <li>الحذر الشديد من الغيبة والنميمة والظلم</li>
+        <li>المحاسبة الأخروية دقيقة وعادلة</li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">2</div>
+      <div class="lesson-title">مقاصد الشريعة الإسلامية</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>مقاصد الشريعة:</strong> الأهداف والغايات التي تسعى الشريعة الإسلامية إلى تحقيقها لإسعاد الإنسان في الدنيا والآخرة — وهي حفظ الضروريات الخمس.</p>
+      </div>
+ 
+      <table>
+        <tr><th>المقصد</th><th>ما شرعه الإسلام لتحقيقه</th><th>ما شرعه لصونه</th></tr>
+        <tr><td>🕌 حفظ الدين</td><td>إقامة الشعائر، الجهاد، الدعوة</td><td>حد الردة</td></tr>
+        <tr><td>👤 حفظ النفس</td><td>القصاص، تحريم الانتحار</td><td>حد القتل</td></tr>
+        <tr><td>🧠 حفظ العقل</td><td>الحثّ على العلم والتفكر</td><td>تحريم الخمر والمخدرات</td></tr>
+        <tr><td>👨‍👩‍👧 حفظ النسل</td><td>عقد الزواج وصونه</td><td>تحريم الزنا وحده</td></tr>
+        <tr><td>💰 حفظ المال</td><td>العمل والتجارة المشروعة</td><td>حد السرقة، تحريم الربا</td></tr>
+      </table>
+ 
+      <span class="section-label">مستويات المقاصد</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>الضروريات</h4>
+          <p>لا يصلح أمر الناس دينياً ودنيوياً بدونها — الخمسة المذكورة</p>
+        </div>
+        <div class="mini-card">
+          <h4>الحاجيات</h4>
+          <p>ترفع المشقة والحرج — الرخص الشرعية</p>
+        </div>
+      </div>
+      <div class="mini-card" style="margin-top:12px;">
+        <h4>التحسينيات</h4>
+        <p>تزيد من جودة الحياة — مكارم الأخلاق، الآداب، النظافة</p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">3</div>
+      <div class="lesson-title">منهج الإسلام في مكافحة الجريمة</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <span class="section-label">مناهج الإسلام في مكافحة الجريمة</span>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h4>أولاً: الوقاية (العلاج قبل الوقوع)</h4>
+          <ul>
+            <li>التربية الدينية والأخلاقية</li>
+            <li>تعزيز الرقابة الذاتية (الضمير)</li>
+            <li>بناء المجتمع الصالح</li>
+            <li>سد الذرائع المؤدية للجريمة</li>
+          </ul>
+        </div>
+        <div class="mini-card">
+          <h4>ثانياً: الردع (العلاج بعد الوقوع)</h4>
+          <ul>
+            <li>إقامة الحدود الشرعية</li>
+            <li>تحقيق العدل بين الناس</li>
+            <li>القصاص الرادع</li>
+            <li>التوبة والإصلاح</li>
+          </ul>
+        </div>
+      </div>
+ 
+      <span class="section-label">أنواع الحدود الشرعية</span>
+      <table>
+        <tr><th>الجريمة</th><th>الحد</th><th>الحكمة</th></tr>
+        <tr><td>القتل العمد</td><td>القصاص</td><td>حفظ النفس وردع القاتل</td></tr>
+        <tr><td>السرقة</td><td>قطع اليد (بشروط دقيقة)</td><td>حفظ المال</td></tr>
+        <tr><td>الزنا</td><td>الجلد (للبكر) أو الرجم (للمحصن)</td><td>حفظ النسل والشرف</td></tr>
+        <tr><td>القذف</td><td>ثمانون جلدة</td><td>حفظ الأعراض والسمعة</td></tr>
+        <tr><td>شرب الخمر</td><td>الجلد</td><td>حفظ العقل والمجتمع</td></tr>
+      </table>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">4</div>
+      <div class="lesson-title">من وصايا النبي ﷺ في حجة الوداع</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="tip-box">
+        حجة الوداع كانت عام 10 هـ — آخر حج قام به النبي ﷺ · كانت خطبته ميثاقاً إنسانياً عالمياً.
+      </div>
+ 
+      <span class="section-label">أبرز وصايا حجة الوداع</span>
+      <table>
+        <tr><th>#</th><th>الوصية</th></tr>
+        <tr><td>1</td><td><strong>حرمة الدماء والأموال والأعراض:</strong> «إن دماءكم وأموالكم وأعراضكم عليكم حرام»</td></tr>
+        <tr><td>2</td><td><strong>تحريم الربا:</strong> إلغاء كل ربا جاهلي ابتداءً من ربا العباس</td></tr>
+        <tr><td>3</td><td><strong>حقوق المرأة:</strong> «استوصوا بالنساء خيراً»</td></tr>
+        <tr><td>4</td><td><strong>التمسك بالقرآن والسنة:</strong> «تركت فيكم ما لن تضلوا إن اعتصمتم به: كتاب الله»</td></tr>
+        <tr><td>5</td><td><strong>المساواة:</strong> «لا فضل لعربي على أعجمي إلا بالتقوى»</td></tr>
+        <tr><td>6</td><td><strong>الدعوة إلى الوحدة ونبذ الفرقة</strong></td></tr>
+      </table>
+ 
+      <div class="success-box">
+        حجة الوداع كانت إعلاناً لحقوق الإنسان قبل 14 قرناً من الإعلان العالمي لحقوق الإنسان!
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">5</div>
+      <div class="lesson-title">المسؤولية المجتمعية في الإسلام</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <div class="def-box">
+        <p><strong>المسؤولية المجتمعية:</strong> التزام الفرد والمؤسسات بالمشاركة الإيجابية في بناء المجتمع والحفاظ على مصالحه العامة.</p>
+      </div>
+ 
+      <span class="section-label">صور المسؤولية المجتمعية</span>
+      <ul class="points-list">
+        <li>الأمر بالمعروف والنهي عن المنكر</li>
+        <li>التطوع في خدمة المجتمع</li>
+        <li>دفع الزكاة والصدقات</li>
+        <li>الوقف على وجوه الخير</li>
+        <li>المشاركة في إصلاح ذات البين</li>
+        <li>الدفاع عن الوطن والأمة</li>
+      </ul>
+ 
+      <div class="hadith-box">
+        «مثل المؤمنين في توادّهم وتراحمهم وتعاطفهم كمثل الجسد إذا اشتكى منه عضو تداعى له سائر الجسد بالسهر والحمى»
+        <small>[رواه البخاري ومسلم]</small>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="lesson-card">
+    <div class="lesson-header" onclick="toggleLesson(this)">
+      <div class="lesson-num">6</div>
+      <div class="lesson-title">حقوق الإنسان بين الإسلام والإعلان العالمي</div>
+      <span class="lesson-arrow">▾</span>
+    </div>
+    <div class="lesson-body">
+      <span class="section-label">المقارنة بين الإسلام والإعلان العالمي 1948م</span>
+      <table>
+        <tr><th>وجه المقارنة</th><th>حقوق الإنسان في الإسلام</th><th>الإعلان العالمي</th></tr>
+        <tr><td>المصدر</td><td>إلهي · من الله تعالى</td><td>بشري · وضعه الإنسان</td></tr>
+        <tr><td>الثبات</td><td>ثابت لا يُعدَّل</td><td>قابل للتعديل والتغيير</td></tr>
+        <tr><td>الشمول</td><td>شامل لكل جوانب الحياة</td><td>يُركز على الجانب المدني</td></tr>
+        <tr><td>التاريخ</td><td>قبل 14 قرناً</td><td>1948م</td></tr>
+        <tr><td>نقاط التقاء</td><td colspan="2">تحريم التعذيب · المساواة · الحرية · الكرامة الإنسانية</td></tr>
+      </table>
+ 
+      <span class="section-label">أبرز حقوق الإنسان في الإسلام</span>
+      <ul class="points-list">
+        <li>الحق في الحياة والكرامة</li>
+        <li>الحق في العدل والمساواة أمام القانون</li>
+        <li>حق التعليم والعلم</li>
+        <li>حق الملكية والعمل</li>
+        <li>حق العبادة والتدين</li>
+        <li>حماية الأسرة وحقوق المرأة والطفل</li>
+      </ul>
+    </div>
+  </div>
+ 
+</div><!-- end u4 -->
+ 
+<!-- ═══════════════════════════════════════════════════
+     QUICK REVIEW
+═══════════════════════════════════════════════════ -->
+<div id="review" class="section">
+  <div class="unit-header" data-num="؟">
+    <h2>🔁 مراجعة سريعة — أسئلة وأجوبة</h2>
+    <p>اضغط على السؤال لظهور الجواب</p>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما المقصود بـ«كفتاه» في حديث خواتيم البقرة؟ <span>▾</span>
+    </div>
+    <div class="qa-a">حفظتاه من المكروه — أي أن قراءة آخر آيتين من البقرة في الليل تحفظ صاحبها.</div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما الفرق بين دليل السببية ودليل الإتقان في الدلائل العقلية؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      <strong>دليل السببية:</strong> كل موجود لا بد له من موجِد، فالكون لا يمكن أن يخلق نفسه.<br>
+      <strong>دليل الإتقان:</strong> الدقة البالغة في خلق الكون تدل على خالق مبدع حكيم — الصدفة لا تُنتج هذا النظام المحكم.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما مراتب الأمر بالمعروف والنهي عن المنكر؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      1. <strong>باليد:</strong> إذا قدر عليه ولم يترتب عليه مفسدة أكبر.<br>
+      2. <strong>باللسان:</strong> النصح والإرشاد والتوجيه.<br>
+      3. <strong>بالقلب:</strong> الإنكار القلبي وهو أدنى الإيمان — «وذلك أضعف الإيمان» [رواه مسلم].
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما شروط المجتهد في الشريعة الإسلامية؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      الإسلام، البلوغ، العقل، العدالة، التقوى، العلم بأصول الشريعة، التمكن من اللغة العربية، العلم بأصول الفقه وقواعده، الاطلاع على مستجدات العصر.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما النتيجة التي ترتبت على رسالة النبي ﷺ إلى كسرى؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      مزّق كسرى الرسالة فدعا عليه النبي ﷺ بتمزيق ملكه، وفعلاً تمزق ملك الفرس بعد ذلك — وهذا من معجزات النبي ﷺ.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما الفرق بين الوصية والميراث؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      <strong>الوصية:</strong> تصرف اختياري من الشخص قبل وفاته — تُنفَّذ من الثلث فأقل — لا تكون للوارث.<br>
+      <strong>الميراث:</strong> انتقال المال تلقائياً للورثة بعد الوفاة وفق نظام شرعي محدد — من المال كله بعد الوصية والديون.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما الحديث الذي يصف المفلس الحقيقي يوم القيامة؟ ومن رواه؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      «إن المفلس من أمتي يأتي يوم القيامة بصلاة وصيام وزكاة، ويأتي قد شتم هذا، وقذف هذا...» — رواه الإمام مسلم عن أبي هريرة ﵁.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما صفات عباد الرحمن في سورة الفرقان؟ (أذكر خمساً) <span>▾</span>
+    </div>
+    <div class="qa-a">
+      1. يمشون على الأرض هوناً (تواضع). 2. إذا خاطبهم الجاهلون قالوا سلاماً (حلم). 3. يبيتون ساجدين وقياماً (عبادة). 4. لا يُسرفون ولا يقترون (وسطية). 5. لا يدعون مع الله إلهاً آخر (توحيد).
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما موانع الإرث الثلاثة في الفقه الإسلامي؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      1. <strong>القتل العمد:</strong> من قتل مورّثه لا يرثه. 2. <strong>اختلاف الدين:</strong> المسلم لا يرث الكافر والعكس. 3. <strong>الرق:</strong> العبد لا يرث.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما سبب غزوة تبوك؟ وما أبرز أحداثها؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      <strong>السبب:</strong> وصول أخبار بأن الروم يجهزون جيشاً للهجوم على المسلمين بعد مؤتة.<br>
+      <strong>الأحداث:</strong> تجهيز جيش كبير · تآمر المنافقون · خرج النبي ﷺ بأكبر جيش إسلامي حتى تبوك فلم يجد الروم · عقد معاهدات · عودة الجيش · محاسبة المتخلفين.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما الفرق بين المصالح المعتبرة والمرسلة والملغاة؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      <strong>المعتبرة:</strong> قَبِلها الشرع وأخذ بها (استحباب نظر الخاطب).<br>
+      <strong>المرسلة:</strong> لم يرد فيها نص اعتبار أو إلغاء (تدوين السنة، تأسيس الوزارات).<br>
+      <strong>الملغاة:</strong> ردّها الشرع لأنها تعارض نصاً ثابتاً.
+    </div>
+  </div>
+ 
+  <div class="qa-item">
+    <div class="qa-q" onclick="toggleQA(this)">
+      ما الحكمة من تشريع العِدّة؟ <span>▾</span>
+    </div>
+    <div class="qa-a">
+      1. التأكد من براءة الرحم (لمعرفة نسب الأبناء). 2. إتاحة الفرصة للمراجعة والتفكير في الرجعة. 3. تكريم عشرة الزوجين وحفظ مكانة الزواج.
+    </div>
+  </div>
+ 
+</div>
+ 
+<!-- ═══════════════════════════════════════════════════
+     STUDY SCHEDULE
+═══════════════════════════════════════════════════ -->
+<div id="schedule" class="section">
+  <div class="unit-header" data-num="📅">
+    <h2>📅 خطة دراسة لشهرين (8 أسابيع)</h2>
+    <p>كل أسبوع يحتوي على وحدة + مراجعة + تطبيق</p>
+  </div>
+ 
+  <div class="tip-box">
+    💡 <strong>نصيحة ذهبية:</strong> ادرس كل درس في ثلاث مراحل: (1) اقرأ المذكرة كاملاً مرة (2) ارسم خريطة ذهنية للنقاط الرئيسية (3) أغلق المذكرة واسترجع كل شيء من الذاكرة.
+  </div>
+ 
+  <!-- WEEK 1 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوع<br>الأول</div>
+    <div class="schedule-tasks">
+      <h4>🕌 الوحدة الأولى: الإيمانيات</h4>
+      <div class="task-item">الأيام 1-2: سورة البقرة (284-286) — احفظ الآيات + استيعاب المعاني</div>
+      <div class="task-item">الأيام 3-4: دلائل وجود الله تعالى + إعجاز القرآن</div>
+      <div class="task-item">الأيام 5-6: الأمر بالمعروف + اليوم الآخر وأحداثه</div>
+      <div class="task-item">اليوم 7: الاجتهاد + مراجعة شاملة للوحدة</div>
+    </div>
+  </div>
+ 
+  <!-- WEEK 2 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوع<br>الثاني</div>
+    <div class="schedule-tasks">
+      <h4>🌙 الوحدة الثانية: الشريعة والسيرة</h4>
+      <div class="task-item">الأيام 1-2: سورة الأعراف (31-34) — الحفظ + التفسير</div>
+      <div class="task-item">الأيام 3-4: مراعاة المصالح + السنة النبوية وجهود العلماء</div>
+      <div class="task-item">الأيام 5-6: رسائل النبي ﷺ + تبوك + حقوق المرأة</div>
+      <div class="task-item">اليوم 7: مراجعة شاملة للوحدة الثانية</div>
+    </div>
+  </div>
+ 
+  <!-- WEEK 3 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوع<br>الثالث</div>
+    <div class="schedule-tasks">
+      <h4>⚖️ الوحدة الثالثة: الفقه الأسري</h4>
+      <div class="task-item">الأيام 1-2: سورة الفرقان (63-77) — الحفظ + صفات عباد الرحمن</div>
+      <div class="task-item">الأيام 3-4: الطلاق وأنواعه + العِدّة وأنواعها</div>
+      <div class="task-item">الأيام 5-6: الوصية + الميراث وأصحاب الفروض</div>
+      <div class="task-item">اليوم 7: الوسطية + الوقف + مراجعة شاملة</div>
+    </div>
+  </div>
+ 
+  <!-- WEEK 4 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوع<br>الرابع</div>
+    <div class="schedule-tasks">
+      <h4>🌟 الوحدة الرابعة: المجتمع والحقوق</h4>
+      <div class="task-item">الأيام 1-2: حديث الإفلاس + مقاصد الشريعة الخمسة</div>
+      <div class="task-item">الأيام 3-4: مكافحة الجريمة + وصايا حجة الوداع</div>
+      <div class="task-item">الأيام 5-6: المسؤولية المجتمعية + حقوق الإنسان</div>
+      <div class="task-item">اليوم 7: مراجعة شاملة للوحدة الرابعة</div>
+    </div>
+  </div>
+ 
+  <!-- WEEK 5-6 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوعان<br>5 و 6</div>
+    <div class="schedule-tasks">
+      <h4>🔁 مراجعة شاملة لجميع الوحدات</h4>
+      <div class="task-item">الأسبوع 5: مراجعة الوحدة الأولى والثانية مع التطبيق والأسئلة</div>
+      <div class="task-item">الأسبوع 6: مراجعة الوحدة الثالثة والرابعة مع التطبيق والأسئلة</div>
+      <div class="task-item">حل امتحانات توجيهي سابقة إذا أمكن</div>
+      <div class="task-item">التركيز على نقاط الضعف الشخصية</div>
+    </div>
+  </div>
+ 
+  <!-- WEEK 7-8 -->
+  <div class="schedule-day">
+    <div class="day-circle">الأسبوعان<br>7 و 8</div>
+    <div class="schedule-tasks">
+      <h4>✅ الإتقان النهائي</h4>
+      <div class="task-item">ترسيخ حفظ الآيات الكريمة والأحاديث الشريفة</div>
+      <div class="task-item">مراجعة التعاريف والمصطلحات المهمة</div>
+      <div class="task-item">مراجعة الجداول والمقارنات</div>
+      <div class="task-item">آخر 3 أيام: راحة وقراءة خفيفة وتوكل على الله</div>
+    </div>
+  </div>
+ 
+  <div style="margin-top:28px; padding:20px; background:linear-gradient(135deg,#0a6640,#0d4f31); color:white; border-radius:16px; text-align:center;">
+    <div style="font-size:28px; margin-bottom:8px;">🤲</div>
+    <p style="font-family:'Amiri',serif; font-size:18px; line-height:2;">
+      «وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ»
+    </p>
+    <p style="font-size:13px; opacity:0.8; margin-top:8px;">توكل على الله واجتهد — النجاح بإذنه تعالى ✨</p>
+  </div>
+</div>
+ 
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+ 
+  function toggleLesson(header) {
+    const body = header.nextElementSibling;
+    const arrow = header.querySelector('.lesson-arrow');
+    if (body.style.display === 'none' || !body.style.display) {
+      body.style.display = 'block';
+      arrow.textContent = '▴';
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      body.style.display = 'none';
+      arrow.textContent = '▾';
+    }
+  }
+ 
+  function toggleQA(q) {
+    const a = q.nextElementSibling;
+    a.classList.toggle('open');
+    q.querySelector('span').textContent = a.classList.contains('open') ? '▴' : '▾';
+  }
+ 
+  // Open all lessons by default
+  document.querySelectorAll('.lesson-body').forEach(b => b.style.display = 'block');
+  document.querySelectorAll('.lesson-arrow').forEach(a => a.textContent = '▴');
+</script>
+<!-- ═══ FOOTER SOCIAL ═══ -->
+<footer class="footer-social">
+  <h3>تواصل مع المصمم</h3>
+  <div class="social-links">
+    <!-- فيسبوك -->
+    <a href="https://www.facebook.com/share/17cQyevHdt/" target="_blank" class="social-link fb">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <!-- انستقرام -->
+    <a href="https://www.instagram.com/ya_s8.l?igsh=eWx1MXJwcjVoamN0" target="_blank" class="social-link ig">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <!-- واتساب -->
+    <a href="https://wa.me/962791416565" target="_blank" class="social-link wa">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- تيلجرام -->
+    <a href="https://t.me/+962791416565" target="_blank" class="social-link tg">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+  </div>
+  <p style="margin-top: 15px; font-size: 12px; color: #777;">جميع الحقوق محفوظة © 2026</p>
+</footer>
+</body>
+</html>
